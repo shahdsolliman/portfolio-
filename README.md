@@ -25,32 +25,6 @@ A lightweight, responsive, and self-contained web portfolio built with clean sta
 - Vanilla JavaScript (ES6+, DOM API, IntersectionObserver)
 - Web Fonts: Fraunces, Instrument Sans, JetBrains Mono
 
-## Local Development
-
-To run this project locally:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/shahdsolliman/portfolio-.git
-   ```
-2. Navigate into the directory:
-   ```bash
-   cd portfolio-
-   ```
-3. Open `index.html` in any web browser, or launch a local server:
-   ```bash
-   npx serve .
-   ```
-
-## Repository Structure
-
-```
-.
-|-- .nojekyll       # Disables Jekyll build processing on GitHub Pages
-|-- index.html      # Complete portfolio application source
-`-- README.md       # Repository documentation
-```
-
 ## Contact
 
 - Email: shahd.soliman2050@gmail.com
