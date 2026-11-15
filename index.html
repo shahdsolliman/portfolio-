@@ -1278,391 +1278,18 @@ footer.site-footer {
 
 /* ===== PRINT STYLES ===== */
 
-/* ATS CV container hidden on screen */
-#ats-cv {
-  display: none;
-}
-
 @media print {
-  /* Hide the entire web portfolio layout */
-  body > *:not(#ats-cv) {
+  header.site-header, #bar, .filters, .hero-actions, .copy-btn, .btn-cv, #lb, #toast, .back-top, .theme-toggle {
     display: none !important;
   }
-
-  /* Reset page for pristine ATS printed document */
-  @page {
-    size: A4 portrait;
-    margin: 12mm 14mm 12mm 14mm;
-  }
-
-  *, *::before, *::after {
-    background: transparent !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-    color: #000000 !important;
-  }
-
-  html, body {
-    background: #FFFFFF !important;
-    color: #000000 !important;
-    font-family: Calibri, "Segoe UI", Arial, Helvetica, sans-serif !important;
-    font-size: 10pt !important;
-    line-height: 1.35 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100% !important;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-
-  /* ATS CV Container */
-  #ats-cv {
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  /* Header */
-  .ats-header {
-    text-align: center;
-    border-bottom: 1.5pt solid #1a365d;
-    padding-bottom: 6pt;
-    margin-bottom: 10pt;
-  }
-  .ats-name {
-    font-size: 19pt !important;
-    font-weight: 700;
-    letter-spacing: 0.5pt;
-    color: #0f172a !important;
-    margin: 0 0 2pt 0;
-    text-transform: uppercase;
-  }
-  .ats-title {
-    font-size: 11pt !important;
-    font-weight: 600;
-    color: #1e3a8a !important;
-    margin: 0 0 4pt 0;
-  }
-  .ats-contact {
-    font-size: 9pt !important;
-    color: #334155 !important;
-    line-height: 1.4;
-  }
-  .ats-contact a {
-    color: #0f172a !important;
-    text-decoration: none;
-  }
-
-  /* Sections */
-  .ats-section {
-    margin-bottom: 10pt;
-    page-break-inside: auto;
-  }
-  .ats-sec-title {
-    font-size: 11pt !important;
-    font-weight: 700;
-    letter-spacing: 0.5pt;
-    text-transform: uppercase;
-    color: #0f172a !important;
-    border-bottom: 1pt solid #cbd5e1;
-    padding-bottom: 2pt;
-    margin: 0 0 5pt 0;
-  }
-
-  /* Summary */
-  .ats-summary {
-    font-size: 9.5pt !important;
-    line-height: 1.4;
-    text-align: justify;
-    margin: 0;
-  }
-
-  /* Skills */
-  .ats-skill-group p {
-    font-size: 9pt !important;
-    line-height: 1.4;
-    margin: 0 0 2.5pt 0;
-  }
-  .ats-skill-group strong {
-    color: #0f172a !important;
-    font-weight: 700;
-  }
-
-  /* Items (Experience, Projects, Education) */
-  .ats-item {
-    margin-bottom: 7pt;
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-  .ats-item-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    font-size: 10pt !important;
-    margin-bottom: 1pt;
-  }
-  .ats-item-company {
-    font-weight: 700;
-    color: #0f172a !important;
-  }
-  .ats-item-role {
-    font-style: italic;
-    color: #334155 !important;
-  }
-  .ats-item-tag {
-    font-size: 8.5pt !important;
-    font-weight: 600;
-    color: #1e3a8a !important;
-    margin-left: 4pt;
-  }
-  .ats-item-date {
-    font-size: 9pt !important;
-    font-weight: 600;
-    color: #475569 !important;
-    white-space: nowrap;
-  }
-  .ats-item-loc {
-    font-size: 8.5pt !important;
-    font-style: italic;
-    color: #64748b !important;
-    margin: 0 0 2pt 0;
-  }
-  .ats-tech-used {
-    font-size: 8.5pt !important;
-    color: #1e293b !important;
-    margin: 1pt 0 2pt 0;
-  }
-
-  /* Bullet lists */
-  .ats-list {
-    margin: 2pt 0 0 0;
-    padding-left: 14pt;
-    list-style-type: disc;
-  }
-  .ats-list li {
-    font-size: 9pt !important;
-    line-height: 1.35;
-    margin-bottom: 2pt;
-    color: #1e293b !important;
-  }
-  .ats-certs-list li {
-    margin-bottom: 2.5pt;
-  }
-
-  .ats-edu-details {
-    font-size: 9pt !important;
-    line-height: 1.4;
-    margin: 2pt 0 0 0;
+  body {
+    background: #FFF !important;
+    color: #000 !important;
   }
 }
 </style>
 </head>
 <body>
-<!-- DEDICATED ATS-FRIENDLY CV PRINT CONTAINER -->
-<div id="ats-cv" class="ats-cv-root" aria-hidden="true">
-  <header class="ats-header">
-    <h1 class="ats-name">SHAHD MOHAMMED SOLIMAN</h1>
-    <p class="ats-title">Software Developer &amp; Backend .NET Specialist</p>
-    <div class="ats-contact">
-      <span>10th of Ramadan City, Egypt</span> &bull;
-      <span><a href="mailto:shahd.soliman2050@gmail.com">shahd.soliman2050@gmail.com</a></span> &bull;
-      <span><a href="https://linkedin.com/in/shahd-soliman-7974993a8">linkedin.com/in/shahd-soliman-7974993a8</a></span> &bull;
-      <span><a href="https://github.com/shahdsolliman">github.com/shahdsolliman</a></span>
-    </div>
-  </header>
-
-  <section class="ats-section">
-    <h2 class="ats-sec-title">PROFESSIONAL SUMMARY</h2>
-    <p class="ats-summary">
-      Software Developer specializing in ASP.NET Core, C#, Clean Architecture, and resilient RESTful Web APIs. 
-      Computer Science graduate from Higher Technological Institute (Class of 2026, Graduation Project Grade A+). 
-      Proven track record designing production backend architectures, CQRS with MediatR, JWT authentication, 
-      Redis caching, and integrating full-stack web solutions with modern frontends (Next.js, Angular).
-    </p>
-  </section>
-
-  <section class="ats-section">
-    <h2 class="ats-sec-title">TECHNICAL SKILLS</h2>
-    <div class="ats-skill-group">
-      <p><strong>Languages:</strong> C#, SQL (T-SQL), TypeScript, JavaScript, HTML5, CSS3</p>
-      <p><strong>Backend &amp; APIs:</strong> ASP.NET Core (.NET 8), RESTful Web APIs, Entity Framework Core, LINQ, MediatR, FluentValidation, AutoMapper, Serilog</p>
-      <p><strong>Architecture &amp; Patterns:</strong> Clean Architecture, Onion Architecture, CQRS Pattern, SOLID Principles, Repository &amp; Unit of Work, Specification Pattern</p>
-      <p><strong>Databases, Cache &amp; Messaging:</strong> Microsoft SQL Server, Redis (Distributed Cache &amp; Semantic Cache), SignalR (WebSockets), Hangfire</p>
-      <p><strong>Security &amp; Integrations:</strong> JWT Authentication, ASP.NET Core Identity, Role-Based Access Control (RBAC), PayMob Gateway, Stripe API</p>
-      <p><strong>Tools &amp; Frontend:</strong> Git &amp; GitHub, Postman, Swagger / OpenAPI, Docker, Angular, Next.js, Tailwind CSS, Vercel, Zoho Mail</p>
-    </div>
-  </section>
-
-  <section class="ats-section">
-    <h2 class="ats-sec-title">WORK &amp; TRAINING EXPERIENCE</h2>
-
-    <div class="ats-item">
-      <div class="ats-item-header">
-        <div>
-          <span class="ats-item-company">OptifyERP</span> &mdash;
-          <span class="ats-item-role">ERP Specialist Intern</span>
-        </div>
-        <span class="ats-item-date">Nov 2025 – Feb 2026</span>
-      </div>
-      <p class="ats-item-loc">Cairo, Egypt</p>
-      <ul class="ats-list">
-        <li>Analyzed enterprise resource planning (ERP) business workflows, accounting modules, and operational system requirements.</li>
-        <li>Authored structured technical specifications, system architecture documentation, and end-user standard operating procedures (SOPs).</li>
-        <li>Created automated AI-assisted instructional materials and process walk-throughs for core ERP transaction modules.</li>
-      </ul>
-    </div>
-
-    <div class="ats-item">
-      <div class="ats-item-header">
-        <div>
-          <span class="ats-item-company">Prodigy InfoTech</span> &mdash;
-          <span class="ats-item-role">Backend Development Intern</span>
-        </div>
-        <span class="ats-item-date">June 2025</span>
-      </div>
-      <p class="ats-item-loc">Remote</p>
-      <ul class="ats-list">
-        <li>Engineered robust RESTful API endpoints and integrated backend data services with mobile client applications.</li>
-        <li>Participated in daily agile code reviews, Git feature-branch workflows, and staging environment verification.</li>
-        <li>Executed comprehensive API test suites using Postman, validating schema payloads and performance profiling.</li>
-      </ul>
-    </div>
-
-    <div class="ats-item">
-      <div class="ats-item-header">
-        <div>
-          <span class="ats-item-company">Route IT Training Center</span> &mdash;
-          <span class="ats-item-role">Frontend Angular Specialist Training</span>
-        </div>
-        <span class="ats-item-date">June 2025 – Jan 2026</span>
-      </div>
-      <p class="ats-item-loc">Cairo, Egypt</p>
-      <ul class="ats-list">
-        <li>Completed intensive hands-on coursework in Angular, TypeScript, RxJS reactive programming, and Angular Signals.</li>
-        <li>Engineered enterprise client architectures with modular routing, lazy loading, route guards, and HTTP interceptors.</li>
-      </ul>
-    </div>
-
-    <div class="ats-item">
-      <div class="ats-item-header">
-        <div>
-          <span class="ats-item-company">Route IT Training Center</span> &mdash;
-          <span class="ats-item-role">Backend .NET Core Development Trainee</span>
-        </div>
-        <span class="ats-item-date">June 2024 – Dec 2024</span>
-      </div>
-      <p class="ats-item-loc">Cairo, Egypt</p>
-      <ul class="ats-list">
-        <li>Rigorous engineering program covering C#, Object-Oriented Programming (OOP), SOLID design principles, and SQL Server.</li>
-        <li>Developed production-ready RESTful APIs adopting Clean Architecture, Entity Framework Core, Repository Pattern, and JWT authentication.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="ats-section">
-    <h2 class="ats-sec-title">KEY TECHNICAL PROJECTS</h2>
-
-    <div class="ats-item">
-      <div class="ats-item-header">
-        <div>
-          <span class="ats-item-company">Morourak: Smart Traffic Services Platform</span>
-          <span class="ats-item-tag">Graduation Project &mdash; Grade A+ (98%)</span>
-        </div>
-        <span class="ats-item-date">2025 – 2026</span>
-      </div>
-      <p class="ats-tech-used"><strong>Technologies:</strong> ASP.NET Core, C#, Clean Architecture, CQRS, MediatR, EF Core, SQL Server, Redis, PayMob, Swagger</p>
-      <ul class="ats-list">
-        <li>Architected enterprise-grade backend following Clean Architecture with strict separation of Core, Application, Infrastructure, and API layers.</li>
-        <li>Engineered 60+ RESTful API endpoints handling license renewal, digital payments, and traffic violation management with comprehensive Swagger docs.</li>
-        <li>Implemented CQRS pattern using MediatR pipeline behaviors for centralized request validation (FluentValidation), logging, and unhandled exception handling.</li>
-        <li>Integrated PayMob payment gateway for electronic payments with HMAC signature security and automated webhook transaction verification.</li>
-        <li>Configured distributed Redis caching, reducing database read latency by 60% for high-frequency traffic query services.</li>
-      </ul>
-    </div>
-
-    <div class="ats-item">
-      <div class="ats-item-header">
-        <div>
-          <span class="ats-item-company">SnapShop: E-Commerce Web API</span>
-        </div>
-        <span class="ats-item-date">2024</span>
-      </div>
-      <p class="ats-tech-used"><strong>Technologies:</strong> ASP.NET Core, Entity Framework Core, SQL Server, Redis, JWT, Stripe API, Repository Pattern</p>
-      <ul class="ats-list">
-        <li>Built scalable RESTful e-commerce backend utilizing Repository &amp; Specification design patterns for dynamic filtering, sorting, and pagination.</li>
-        <li>Engineered Redis in-memory shopping cart service with distributed cache expiration and automated data serialization.</li>
-        <li>Implemented JWT token authentication with ASP.NET Core Identity, refresh token lifecycle, and role-based authorization.</li>
-        <li>Integrated Stripe Payment Intent API with webhook confirmation handling order processing and inventory deduction.</li>
-      </ul>
-    </div>
-
-    <div class="ats-item">
-      <div class="ats-item-header">
-        <div>
-          <span class="ats-item-company">NotifyHub: Real-Time Notification &amp; Event System</span>
-        </div>
-        <span class="ats-item-date">2025</span>
-      </div>
-      <p class="ats-tech-used"><strong>Technologies:</strong> ASP.NET Core, SignalR, WebSockets, Hangfire, SQL Server, Serilog</p>
-      <ul class="ats-list">
-        <li>Engineered real-time bi-directional messaging service with SignalR WebSockets supporting individual, group, and broadcast channels.</li>
-        <li>Implemented Hangfire recurring and delayed background job queues for scheduled email dispatch and system health monitoring.</li>
-        <li>Configured Polly fault-tolerant retry policies and structured Serilog event telemetry for enterprise observability.</li>
-      </ul>
-    </div>
-
-    <div class="ats-item">
-      <div class="ats-item-header">
-        <div>
-          <span class="ats-item-company">Kemet Group Corporate Web Platform</span>
-        </div>
-        <span class="ats-item-date">2025</span>
-      </div>
-      <p class="ats-tech-used"><strong>Technologies:</strong> Next.js, TypeScript, Tailwind CSS, Namecheap DNS, Zoho Mail, Vercel CI/CD</p>
-      <ul class="ats-list">
-        <li>Built modern responsive bilingual (Arabic/English) corporate web application with dynamic project showcases and theme switching.</li>
-        <li>Configured custom corporate domain via Namecheap, connected DNS records to Vercel hosting, and automated production CI/CD pipelines.</li>
-        <li>Implemented branded business email infrastructure with Zoho Mail including SPF, DKIM, and MX DNS verification for spam-free deliverability.</li>
-        <li>Established and managed company social media presence and online branding across digital channels.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="ats-section">
-    <h2 class="ats-sec-title">EDUCATION</h2>
-    <div class="ats-item">
-      <div class="ats-item-header">
-        <div>
-          <span class="ats-item-company">Higher Technological Institute (HTI)</span> &mdash;
-          <span class="ats-item-role">Bachelor of Science in Computer Science</span>
-        </div>
-        <span class="ats-item-date">Class of 2026</span>
-      </div>
-      <p class="ats-item-loc">10th of Ramadan City, Egypt</p>
-      <p class="ats-edu-details">
-        <strong>Graduation Project Grade:</strong> Excellent &mdash; Grade A+ (98%) &bull; 
-        <strong>Cumulative GPA:</strong> 2.98 / 4.0<br>
-        <strong>Core Coursework:</strong> Data Structures &amp; Algorithms, Object-Oriented Programming, Database Management Systems, Software Engineering, Operating Systems, Computer Networks.
-      </p>
-    </div>
-  </section>
-
-  <section class="ats-section">
-    <h2 class="ats-sec-title">CERTIFICATES &amp; ACHIEVEMENTS</h2>
-    <ul class="ats-list ats-certs-list">
-      <li><strong>Backend (.NET Core) Diploma</strong> &mdash; Route IT Training Center (December 2024)</li>
-      <li><strong>Frontend Development Diploma</strong> &mdash; Route IT Training Center (January 2026)</li>
-      <li><strong>Foundational C# with Microsoft Certification</strong> &mdash; freeCodeCamp &times; Microsoft (September 2025)</li>
-      <li><strong>C# (Basic) Skills Certification</strong> &mdash; HackerRank (July 2025)</li>
-      <li><strong>Web Development Summer Camp (40 Hours)</strong> &mdash; Sprints &times; Microsoft</li>
-      <li><strong>ECPC 2023 Qualifier Contestant</strong> &mdash; Egyptian Collegiate Programming Contest</li>
-    </ul>
-  </section>
-</div>
-<!-- END DEDICATED ATS-FRIENDLY CV PRINT CONTAINER -->
-
 <div id="bar" aria-hidden="true"></div>
 
 <!-- STICKY SITE HEADER -->
@@ -1695,11 +1322,11 @@ footer.site-footer {
           <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
         </svg>
       </button>
-      <!-- Print/Save CV button -->
-      <button type="button" class="btn-cv" id="printCvBtn" title="Print or save PDF CV">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-        <span>Print CV</span>
-      </button>
+      <!-- Download / View CV button -->
+      <a href="assets/Shahd_Soliman_CV_Backend_Developer.pdf" target="_blank" rel="noopener" class="btn-cv" id="viewCvBtn" title="View or download Shahd Soliman's CV (PDF)">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+        <span>View CV (PDF)</span>
+      </a>
     </div>
   </div>
 </header>
@@ -1722,6 +1349,10 @@ footer.site-footer {
     </p>
     <div class="hero-actions">
       <a class="btn fill" href="#contact">Get in touch</a>
+      <a class="btn" href="assets/Shahd_Soliman_CV_Backend_Developer.pdf" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+        Download CV (PDF)
+      </a>
       <a class="btn" href="#projects">View Projects</a>
       <button type="button" class="btn" id="heroCopyEmail">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
@@ -1848,6 +1479,10 @@ footer.site-footer {
       </div>
 
       <div class="contact-meta-row">
+        <a class="btn" href="assets/Shahd_Soliman_CV_Backend_Developer.pdf" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+          Download CV (PDF) ↗
+        </a>
         <a class="btn" href="https://linkedin.com/in/shahd-soliman-7974993a8" target="_blank" rel="noopener">LinkedIn ↗</a>
         <a class="btn" href="https://github.com/shahdsolliman" target="_blank" rel="noopener">GitHub ↗</a>
         <span style="font-size:13.5px;">📍 10th of Ramadan City, Egypt · Phone available on request</span>
@@ -2378,8 +2013,7 @@ function showToast(msg) {
 $("heroCopyEmail").addEventListener("click", () => copyEmail("shahd.soliman2050@gmail.com"));
 $("contactCopyEmail").addEventListener("click", () => copyEmail("shahd.soliman2050@gmail.com"));
 
-/* Print CV Button */
-$("printCvBtn").addEventListener("click", () => window.print());
+
 
 /* Back to Top */
 $("backToTop").addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
