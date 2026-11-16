@@ -424,9 +424,6 @@ header.hero {
     font-size: 11.5px !important;
     padding: 2px 8px !important;
   }
-  .projects-grid, .exp-grid, .skills-grid, .certs-grid {
-    grid-template-columns: 1fr !important;
-  }
 }
 
 .hero-title {
@@ -1086,12 +1083,13 @@ ol.tl span {
 }
 .cert-thumb-wrap {
   position: relative;
-  aspect-ratio: 16/11;
+  aspect-ratio: 16/10;
+  max-height: 140px;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--rule);
   background: var(--chip);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   cursor: pointer;
 }
 .cert-thumb-wrap img {
@@ -1377,8 +1375,246 @@ footer.site-footer {
   object-fit: cover;
   display: block;
 }
-@media (max-width: 600px) {
-  #lb { padding-left: 12px; padding-right: 12px; }
+/* ===== COMPREHENSIVE MOBILE RESPONSIVENESS & UX ENHANCEMENTS ===== */
+@media (max-width: 768px) {
+  .wrap {
+    padding: 0 16px;
+  }
+  section {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 42px 0;
+  }
+  section > h2 {
+    position: static;
+    top: auto;
+    font-size: 13px;
+    letter-spacing: .08em;
+    margin-bottom: 4px;
+  }
+  .about-wrap {
+    gap: 20px;
+  }
+  .about-quote {
+    font-size: 20px;
+    line-height: 1.45;
+  }
+  .about-metrics {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .metric-card {
+    padding: 12px 14px;
+  }
+  .metric-val {
+    font-size: 20px;
+  }
+  .skills-matrix {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 680px) {
+  /* Projects Section Polish */
+  .filters {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .filters::-webkit-scrollbar {
+    display: none;
+  }
+  .filters button {
+    flex-shrink: 0;
+    padding: 6px 14px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .proj {
+    padding: 18px 16px;
+    border-radius: 14px;
+    margin-bottom: 18px;
+  }
+  .proj-header {
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .proj h3 {
+    font-size: 19px;
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+  .proj.feat h3 {
+    font-size: 20px;
+  }
+  .proj-desc {
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 14px;
+  }
+  .thumbs {
+    grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
+    gap: 8px;
+    margin: 14px 0 16px;
+  }
+  .th {
+    aspect-ratio: 16/10;
+    border-radius: 6px;
+  }
+  .chips {
+    gap: 5px;
+    margin: 12px 0;
+  }
+  .chips li {
+    font-size: 11px;
+    padding: 2.5px 7px;
+  }
+  .proj ul.points {
+    font-size: 13px;
+    padding-left: 16px;
+    margin: 10px 0 12px;
+  }
+  .proj ul.points li {
+    margin-bottom: 4px;
+  }
+  .plinks {
+    gap: 8px;
+    margin-top: 12px;
+    padding-top: 10px;
+  }
+  .plinks a {
+    font-size: 12.5px;
+    padding: 6px 12px;
+    background: var(--accent-soft);
+    border-radius: 6px;
+    border: 1px solid var(--accent-border);
+  }
+
+  /* Certificates Compact List on Mobile */
+  .certs-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .cert-card {
+    padding: 12px 14px;
+    border-radius: 12px;
+    gap: 8px;
+  }
+  .cert-card > div:first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+  .cert-thumb-wrap {
+    width: 86px;
+    height: 60px;
+    min-width: 86px;
+    aspect-ratio: auto;
+    max-height: none;
+    margin-bottom: 0;
+    flex-shrink: 0;
+    border-radius: 6px;
+  }
+  .cert-info {
+    flex: 1;
+    min-width: 0;
+  }
+  .cert-info h4 {
+    font-size: 14px;
+    margin-bottom: 2px;
+    line-height: 1.3;
+  }
+  .cert-meta {
+    font-size: 12px;
+    margin-bottom: 0;
+    line-height: 1.35;
+  }
+  .cert-verify {
+    font-size: 12px;
+    margin-left: 98px;
+    display: inline-flex;
+  }
+
+  /* Experience & Contact on Mobile */
+  .exp-card {
+    padding: 16px 14px;
+    border-radius: 12px;
+  }
+  .exp-card h3 {
+    font-size: 18px;
+  }
+  .exp-role {
+    font-size: 13.5px;
+    margin-bottom: 8px;
+  }
+  .exp-card ul {
+    font-size: 13.5px;
+    padding-left: 16px;
+  }
+  ol.tl li {
+    padding: 0 0 24px 20px;
+  }
+  ol.tl strong {
+    font-size: 17px;
+  }
+  ol.tl span {
+    font-size: 13.5px;
+  }
+  .contact-box {
+    padding: 22px 16px;
+    border-radius: 16px;
+  }
+  .contact-title {
+    font-size: 23px;
+    margin-bottom: 12px;
+  }
+  .email-link {
+    font-size: 15px;
+    word-break: break-all;
+  }
+  #toast {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+  #lb {
+    padding: calc(44px + env(safe-area-inset-top, 0px)) 12px calc(14px + env(safe-area-inset-bottom, 0px));
+  }
+  #lb .nav {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+  #lb .prev { left: 8px; }
+  #lb .next { right: 8px; }
+  footer.site-footer {
+    padding: 32px 0 44px;
+  }
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .cert-verify {
+    margin-left: 0;
+  }
 }
 
 /* ===== PRINT STYLES ===== */
